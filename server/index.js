@@ -12,6 +12,10 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
+app.get("/", (res, req) => {
+  res.send("APP IS RUNNING...!");
+});
+
 //mongoDB username:arun pwd:arun123
 const CONNECTION_URL =
   "mongodb+srv://arun:arun123@cluster0.2fyzz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
